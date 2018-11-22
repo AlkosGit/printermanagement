@@ -1,0 +1,11 @@
+{% extends 'printer/base.html' %}
+
+        {% block body %}
+            Voor het toevoegen, verwijderen of bewerken van printers of accommodaties logt men in
+            op de <a href='{% url "admin:index" %}'>beheerdersconsole</a>
+            <ul>
+                <li><a href='{% url "printers" %}'>Printers</a></li>
+                <li><a href='{% url "accos" %}'>Accommodaties</a></li>
+            </ul>
+        {% endblock %}
+    

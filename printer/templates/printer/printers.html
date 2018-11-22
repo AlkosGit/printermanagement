@@ -1,0 +1,12 @@
+{% extends 'printer/base.html' %}
+
+{% block body %}
+    <h3>Totaaloverzicht Printers</h3>
+    <br>Klik op een printer voor een gedetaileerd overzicht.
+    <ul>
+        {% for printer in printers %}
+            <li><a href='{% url "printer" printer.id %}'>{{ printer }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href='{% url "index" %}'>Terug naar index</a>
+{% endblock %}

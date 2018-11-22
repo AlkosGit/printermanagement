@@ -1,0 +1,17 @@
+body {
+    font-size: small;
+}
+
+a {
+    color: midnightblue;
+    font-size: small;
+    text-decoration: none;
+}
+
+h1, h3 {
+    color: midnightblue;
+}
+
+table {
+    background-color: lightyellow;
+}

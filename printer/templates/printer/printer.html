@@ -1,0 +1,30 @@
+{% extends 'printer/base.html' %}
+
+{% block body %}
+    <h3>Printer: {{ printer.name }}</h3>
+    <ul>
+        <table width=500 style='border:1px solid black;'>
+            <tr>
+                <td width=250>Accommodatie:</td><td width=250>{{ printer.acconame }}</td>
+            <tr>
+                <td width=250>Naam:</td><td width=250>{{ printer.name }}</td>
+            <tr>
+                <td width=250>Merk:</td><td width=250>{{ printer.brand }}</td>
+            <tr>
+                <td width=250>Model:</td><td width=250>{{ printer.model }}</td>
+            <tr>
+                <td width=250>Serienummer:</td><td width=250>{{ printer.serial }}</td>
+            <tr>
+                <td width=250>IP-adres:</td><td width=250>{{ printer.ip }}</td>                    
+            <tr>
+                <td width=250>Begin contract:</td><td width=250>{{ printer.lease_start }}</td>                    
+            <tr>                                                                                                                            
+                <td width=250>Einde contract:</td><td width=250>{{ printer.lease_end }}</td>                    
+            <tr>
+                <td width=250>Maandbedrag:</td><td width=250>€ {{ printer.price }}</td>                    
+            <tr>
+                <td width=250>Contractnummer:</td><td width=250>{{ printer.contract }}</td>                    
+            <tr>                                        
+        </table>
+    </ul>
+{% endblock %}

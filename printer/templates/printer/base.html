@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Printer Management</title>
+        <link rel="stylesheet" href="{% static 'css/printer.css' %}">
+            <body>
+                <table width="500">
+                    <td width="100">
+                        <img src="{% static 'img/optisport.gif' %}">
+                    </td>
+                    <td width="400">
+                        <h1>Optisport Printer Management</h1>
+                    </td>
+                </table>
+                    <br><br>
+                    {% block body %}
+                    {% endblock %}
+            </body>
+    </head>
+</html>

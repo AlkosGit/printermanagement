@@ -1,0 +1,14 @@
+{% extends 'printer/base.html' %}
+
+{% block body %}
+    <br>Een overzicht van alle printers per accommodatie. Klik op een printer voor een gedetaileerd overzicht.    
+    <h3>{{ acco.name }}</h3>
+        <ul>
+            {% for printer in printers %}
+                <li><a href='{% url "printer" printer.id %}'>{{ printer }}</a></li>
+            {% empty %}
+                Geen printers.
+            {% endfor %}
+        </ul>
+{% endblock %}
+        
