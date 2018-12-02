@@ -3,12 +3,21 @@
 {% block body %}
     <br>Een overzicht van alle printers per accommodatie. Klik op een printer voor een gedetaileerd overzicht.    
     <h3>{{ acco.name }}</h3>
-        <ul>
-            {% for printer in printers %}
-                <li><a href='{% url "printer" printer.id %}'>{{ printer }}</a></li>
-            {% empty %}
-                Geen printers.
-            {% endfor %}
-        </ul>
+    {% if printers %}
+        <form action='/printer/' method="GET">
+            <select name='id'>
+                {% for printer in printers %}
+                    <option value={{ printer.id }}>{{ printer }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value='Details'>
+        </form>
+    {% else %}
+        Geen printers.
+    {% endif %}
+            
+            
+                
+            
 {% endblock %}
         

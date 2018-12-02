@@ -29,10 +29,11 @@ def accos(request):
     }
     return render(request, 'printer/accos.html', context)
 
-def acco(request, acco_id):
+def acco(request):
+    acco_id = request.GET['id']
     acco = Acco.objects.get(pk=acco_id)
     context = {
         'acco' : acco,
-        'printers' : acco.location.all()
+        'printers' : acco.location.all().order_by(Lower('name'))
     }
     return render(request, 'printer/acco.html', context)
