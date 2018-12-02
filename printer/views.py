@@ -14,11 +14,9 @@ def printers(request):
     }
     return render(request, 'printer/printers.html', context)
 
-def printer(request, printer_id):
-    try:
-        printer = Printer.objects.get(pk=printer_id)
-    except Printer.DoesNotExist:
-        raise Http404('Printer komt niet voor in database.')
+def printer(request):
+    printer_id = request.GET['id']
+    printer = Printer.objects.get(pk=printer_id)
     context = {
         'printer' : printer
     }

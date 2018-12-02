@@ -8,5 +8,5 @@ urlpatterns = [
     path('accos/', views.accos, name='accos'),
     path('accos/<int:acco_id>', views.acco, name='acco'),
     path('printers', views.printers, name='printers'),
-    path('printers/<int:printer_id>', views.printer, name='printer'),
+    path('printer/', views.printer, name='printer'),
 ]
